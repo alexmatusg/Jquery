@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funciones J-Query</title>
+        <link rel="stylesheet" href="Funciones J-Query.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("img").hide()
+                $("p.lorem").hide()
+                $("button.bt1").click(function(){
+                    $("p.p1").addClass("red")
+                    $("h1.ha").fadeOut()
+                    $("button.bt1").click(function(){
+                        $("p.lorem").fadeIn()
+                    })
+                })
+                $("button.bt2").click(function(){
+                    $("img").show()
+                    $("p.p2").slideDown()
+                    $("button.bt2").click(function(){
+                        $("p.p2").text("m dolor sit amet consectetur adipisicing elit. Cupiditate  voluptate suscipit. Repudiandae inventore e")
+                    })
+                })
+                $("button.bt3").click(function(){
+                    $("h1.hc").addClass("blue")
+                    $("p.lorem").show()
+                    $("button.bt3").click(function(){
+                    $("p.lorem").slideToggle()
+                })
+                })
+              
+            })
+        </script>
+    </head>
+    <body>
+        <div class="fondo">
+            <div class="uno">
+                <h1 class="ha">AddClass</h1>
+                <button class="bt1">AddClass</button>
+                <p class="p1">Click the button to add class "red" to the paragraph</p>
+                <div class="linea"></div>
+            </div>
+            <div class="dos">
+                <h1 class="hb">AddClass</h1>
+                <button class="bt2">AddClass</button>
+                <p class="p2">Click the button to add class "red" to the paragraph</p>
+                <img src="pacman.gif" alt="pacman" class="pacman">
+                <div class="linea"></div>
+            </div>
+            <div class="tres">
+                <h1 class="hc">AddClass</h1>
+                <button class="bt3">AddClass</button>
+                <p>Click the button to add class "red" to the paragraph</p>
+                <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, 
+                    voluptate suscipit. Repudiandae inventore ex dolorum ut repellendus deserunt unde.
+                    Tempora exercitationem in debitis est vitae a fuga voluptates sint quo!</p>
+                <div class="linea"></div>
+            </div>
+        </div>
+    </body>
+</html>

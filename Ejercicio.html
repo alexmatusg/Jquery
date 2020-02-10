@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("img").click(function(){
+                    $("p.especial").hide(); //(1)
+                    $("*").removeClass("especial"); //(2)
+                    console.log($("img").attr("src"));
+                })
+                $("h1").click(function(){
+                    $("p").text("New Paragraph"); //(3)
+                })
+                $("button").click(function(){
+                    console.log($("h2").text())  //(4)
+                    $("h2").addClass("especial")
+                })
+                $("p").click(function(){
+                    $(this).hide();  //(5)
+                })
+
+                $("*").click(function(){  //(6)
+                    if($(this).tagName[0]=="img" || $(this)[0].tagName=="button"){
+                        console.log($(this).val());
+                    }
+                    else{
+                        console.log($(this).text());
+                    }
+                })
+            });
+            
+        </script>
+    </head>
+    <body>
+        <h1>Coding Dojo</h1>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <h2>Web Fundamentals</h2>
+        <p>Paragraph 3</p>
+        <p class="especial">Paragraph 4</p>
+        <h2>Python track</h2>
+        <img src="pacman.gif"class="especial" >
+        <button id="bt_special">Special</button>
+    </body>
+</html>
